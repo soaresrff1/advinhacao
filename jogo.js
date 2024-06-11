@@ -1,4 +1,4 @@
-var aleatorio = Math.floor(Math.random() * 100+101);
+var aleatorio = Math.floor(Math.random() * 100 + 101);
 let nome = "";
 let numero = "";
 let tentativas = 4;
@@ -8,7 +8,7 @@ process.stdin.on("data", function (data) {
   if (!nome) {
     nome = data.toString().trim();
     process.stdout.write(
-      "Bem vindo " +
+      "Bem vindo. " +
         nome +
         " ao jogo de advinhação, digite um número de 100 a 200!\n"
     );
@@ -36,13 +36,13 @@ process.stdin.on("data", function (data) {
     if (tentativas <= 0) {
       console.log("Seu número era " + aleatorio);
       console.log("O jogo foi reiniciado com um número novo\n");
-      aleatorio = Math.floor(Math.random() * 100+101);
+      aleatorio = Math.floor(Math.random() * 100 + 101);
       tentativas = 4;
       console.log("Caso queira encerrar o processo digite ' sair ' ");
     }
   }
   if (data.toString().trim() === "sair") {
-    console.log("Processo encerrado com sucesso!\n");
+    console.log("Processo encerrado com sucesso!");
     process.exit();
   }
 });
